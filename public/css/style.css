@@ -72,6 +72,59 @@ ul{
     padding-bottom: 1rem;
 }
 
+.btn{
+    display: inline-block;
+    padding: 0.9rem 1.75rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    min-width: 125px;
+    text-align: center;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: var(--main-color-dark-1);
+}
+.btn.secondary-btn{
+    position: relative;
+    background-color: transparent;
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 1.0rem;
+    letter-spacing: 0px;
+    border-bottom: 2.5px solid var(--main-color-2);
+    border-radius: 0px;
+    padding: 0.15rem 0;
+    min-width: revert;
+}
+.btn.secondary-btn::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    bottom: -2.5px;
+    left: 0;
+    background-color: var(--main-color-1);
+    transition: 0.3s ease-in-out;
+}
+.btn.secondary-btn:hover::before{
+    width: 100%;
+}
+
+.btn.secondary-btn.sm{
+    padding: 0.07rem 0.1rem;
+    font-size: 0.78rem;
+    border-bottom-width: 2px;
+}
+.btn.secondary-btn.sm::before{
+    height: 2px;
+    bottom: -2px;
+}
+
+
 .filter-btn{
     display:inline-block;
     color: var(--heading-color);
@@ -85,6 +138,10 @@ ul{
     margin-left: 1.3rem;
     font-family: inherit;
     text-transform: uppercase;
+}
+
+.filter-btn.mixitup-control-active{
+    color: var(--main-color-1);
 }
 
 .cat-image img{
