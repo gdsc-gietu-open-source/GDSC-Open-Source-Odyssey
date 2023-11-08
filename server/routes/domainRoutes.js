@@ -13,6 +13,5 @@ router.get("/iot", domainController.exploreIOT);
 router.get("/cloud", domainController.exploreCloud);
 router.get("/cs", domainController.exploreCyberSecurity);
 router.get("/aiml", domainController.exploreAIML);
-router.get("/details", domainController.exploreDetails);
 
 module.exports = router;

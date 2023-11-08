@@ -1,7 +1,6 @@
 require("../models/Database");
 
 const Category = require("../models/Category");
-const Detail = require("../models/Detail");
 
 exports.homepage = async (req, res) => {
   try {
@@ -69,14 +68,6 @@ exports.exploreCP = async (req, res) => {
   }
 };
 
-exports.exploreDetails = async (req, res) => {
-  try {
-    const details = await Detail.find({});
-    res.render("details", {details: details});
-  } catch (error) {
-    res.status(500).send({ message: error.message || "Error Occured" });
-  }
-};
 
 // async function insertDummyData(){
 //     try{
@@ -134,38 +125,5 @@ exports.exploreDetails = async (req, res) => {
 //         console.log("error" + error);
 //     }
 // }
-
-async function insertDummyData() {
-  try {
-    await Detail.insertMany([
-      {
-        name: "To Do List",
-        image: "todo.jpg",
-        description: `This is a simple to do list app where you can add, delete and mark tasks as done`,
-        category: "Web",
-        stack: [
-            "HTML",
-            "CSS",
-            "Node Js",
-            "EJS"
-        ]
-      },
-      {
-        name: "Blog",
-        image: "blog.png",
-        description: `This is a simple bloging website`,
-        category: "Web",
-        stack: [
-            "HTML",
-            "CSS",
-            "Node Js",
-            "EJS"
-        ]
-      },
-    ]);
-  } catch (error) {
-    console.log("error" + error);
-  }
-}
 
 // insertDummyData();
