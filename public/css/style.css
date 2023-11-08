@@ -17,6 +17,9 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     overflow-x: hidden;
     background-color: var(--bg-color);
     font-family: 'Poppins', sans-serif;
@@ -28,6 +31,34 @@ a{
 ul{
     list-style: none;
 }
+
+
+.header {
+    background: var(--main-color-2);
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.header-text {
+    font-size: 35px;
+    font-family: "Edu TAS Beginner", cursive;
+}
+
+
+.content {
+    min-height: calc(100vh - (20px + 20px)); /* Adjust the top and bottom padding */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
 
 .section{
     position: relative;
@@ -231,17 +262,6 @@ ul{
 
 
 /* --- CSS for details page --- */
-.web-development-section {
-    background-color: #f0f0f0; 
-    padding: 20px; 
-  }
-  
-  .web-development-section h2 {
-    font-size: 24px; 
-    color: #333; 
-    margin-bottom: 20px; 
-  }
-  
 .project-details {
     padding: 20px;
 }
@@ -286,3 +306,54 @@ ul{
     max-height: 300px; 
     object-fit: cover; 
 }
+
+
+
+
+
+/* Custom CSS for the Footer */
+footer {
+    background: rgb(58, 55, 55);
+}
+
+.footerContainer {
+    padding: 10px 0;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: transparent;
+    margin: 7px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: white; /* Updated the icon color to white */
+    opacity: 0.9;
+}
+
+.footerBottom {
+    margin-top: 10px;
+}
+
+/* Copyright text style */
+.footerBottom p {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+/* GDSC span style */
+.footerBottom span {
+    color: #33ccff; /* Change this color as needed */
+    font-weight: bold;
+}
+  

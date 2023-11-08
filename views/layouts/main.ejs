@@ -15,10 +15,49 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Baloo+Bhai+2&family=Croissant+One&family=Edu+TAS+Beginner:wght@500;600&family=Roboto+Condensed:ital,wght@0,700;1,700&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
-    <%- body %>
+    <!-- --header-- -->
+    <header class="header">
+      <h1 class="header-text">Open source odyssey!</h1>
+    </header>
+
+    <div class="content">
+      <%- body %>
+    </div>
+
+    <!-- --footer-- -->
+    <footer>
+      <div class="footerContainer">
+          <div class="socialIcons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a href=""><i class="fa-brands fa-google-plus"></i> </a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="footerBottom">
+              <p>Copyright &copy; 2023 Design by <span>GDSC</span></p>
+          </div>
+      </div>
+  </footer>
 
     <script src="js/mixitup.min.js"></script>
     <script
