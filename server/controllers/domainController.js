@@ -15,28 +15,44 @@ async function insertDummyData(){
     try{
         await Category.insertMany([
             {
+                class: "web",
                 name: "Web Development",
                 image: "OpenSourceDevelopmentTeam.jpg"
             },
             {
+                class: "data",
                 name: "Data Science",
                 image: "dataScience.png"
             },
             {
+                class: "cloud",
                 name: "Cloud",
                 "image": "cloud.jpg"
             },
             {
+                class: "aiml",
                 name: "AIML",
                 image: "aiml.webp"
             },
             {
+                class: "android",
                 name: "Android",
                 image: "android.png"
             },
             {
-                name: "CP",
+                class: "cp",
+                name: "Competitive Programming",
                 image: "cp.png"
+            },
+            {
+                class: "cs",
+                name: "Cyber Security",
+                image: "cyberSecurity.jpg"
+            },
+            {
+                class: "iot",
+                name: "IOT",
+                image: "iot.png"
             }
         ]);
     } catch(error){
@@ -44,4 +60,4 @@ async function insertDummyData(){
     }
 }
 
-insertDummyData();
+// insertDummyData();

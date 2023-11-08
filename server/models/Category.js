@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const CategorySchema = new mongoose.Schema({
+    class: {
+        type: String,
+        required: "This is required"
+    },
     name: {
         type: String,
         required: "This is required"

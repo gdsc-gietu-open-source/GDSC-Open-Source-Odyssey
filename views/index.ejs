@@ -9,22 +9,24 @@
             </div>
 
             <div class="filter-btns">
-                <button class="filter-btn">
+                <button class="filter-btn" data-filter="all">
                     All
                 </button>
-                <button class="filter-btn">Cloud</button>
-                <button class="filter-btn">Web</button>
-                <button class="filter-btn">Android</button>
-                <button class="filter-btn">Data Science</button>
-                <button class="filter-btn">CP</button>
-                <button class="filter-btn">AIML</button>
+                <button class="filter-btn" data-filter=".cloud">Cloud</button>
+                <button class="filter-btn" data-filter=".web">Web</button>
+                <button class="filter-btn" data-filter=".android">Android</button>
+                <button class="filter-btn" data-filter=".data">Data Science</button>
+                <button class="filter-btn" data-filter=".cp">CP</button>
+                <button class="filter-btn" data-filter=".aiml">AIML</button>
+                <button class="filter-btn" data-filter=".cs">Cyber Security</button>
+                <button class="filter-btn" data-filter=".iot">IOT</button>
             </div>
         </div>
 
         <div class="category-gallery">
             <% if(categories != ""){ %>
                 <%  categories.forEach(function(category, index) { %>
-                    <div class="mix cat-card projects">
+                    <div class="mix cat-card <%= category.class %>">
                         <div class="cat-image">
                             <img src="../img/<%- category.image %>" alt="image">
                             <div class="cat-overlay">
