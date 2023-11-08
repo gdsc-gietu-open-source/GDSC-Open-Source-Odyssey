@@ -12,6 +12,10 @@ const CategorySchema = new mongoose.Schema({
     image: {
         type: String,
         require: "This is required"
+    },
+    route: {
+        type: String,
+        required: "This is required"
     }
 });
 

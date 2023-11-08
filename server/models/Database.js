@@ -1,6 +1,6 @@
-const { log } = require("console");
+
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection;
 
@@ -13,3 +13,4 @@ db.once("open", ()=>{
 
 //Models 
 require("./Category");
+require("./Detail");

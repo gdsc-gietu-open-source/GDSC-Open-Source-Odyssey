@@ -30,14 +30,14 @@
                         <div class="cat-image">
                             <img src="../img/<%- category.image %>" alt="image">
                             <div class="cat-overlay">
-                                <a href="#" class="cat-icon" style="--i:0.15s" target="_blank">
+                                <a href="/<%- category.route %>" class="cat-icon" style="--i:0.15s" target="_blank">
                                     <i class="uil uil-link-h"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="cat-desc">
                             <h3><%- category.name %></h3>
-                            <a href="#" class="btn secondary-btn" target="_blank">Explore</a>
+                            <a href="/<%- category.route %>" class="btn secondary-btn" target="_blank">Explore</a>
                         </div>
                     </div>
                 <% }) %>
