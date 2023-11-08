@@ -3,7 +3,12 @@ require("../models/Database");
 const Category = require("../models/Category");
 
 exports.homepage = async (req, res)=>{
-    res.render("index", {title: "GDSC HomePage "})
+    try{
+        const categories = await Category.find({});
+        res.render("index", {title: "GDSC HomePage", categories});
+    } catch(error){
+        res.status(500).send({message: error.message || "Error Occured"});
+    }
 };
 
 async function insertDummyData(){
@@ -16,6 +21,22 @@ async function insertDummyData(){
             {
                 name: "Data Science",
                 image: "dataScience.png"
+            },
+            {
+                name: "Cloud",
+                "image": "cloud.jpg"
+            },
+            {
+                name: "AIML",
+                image: "aiml.webp"
+            },
+            {
+                name: "Android",
+                image: "android.png"
+            },
+            {
+                name: "CP",
+                image: "cp.png"
             }
         ]);
     } catch(error){
@@ -23,4 +44,4 @@ async function insertDummyData(){
     }
 }
 
-// insertDummyData();
+insertDummyData();

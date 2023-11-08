@@ -16,40 +16,32 @@
                 <button class="filter-btn">Web</button>
                 <button class="filter-btn">Android</button>
                 <button class="filter-btn">Data Science</button>
+                <button class="filter-btn">CP</button>
+                <button class="filter-btn">AIML</button>
             </div>
         </div>
 
         <div class="category-gallery">
-            <div class="mix cat-card projects">
-                <div class="cat-image">
-                    <img src="../img/OpenSourceDevelopmentTeam.jpg" alt="image">
-                    <div class="cat-overlay">
-                        <a href="#" class="cat-icon" style="--i:0.15s" target="_blank">
-                            <i class="uil uil-link-h"></i>
-                        </a>
+            <% if(categories != ""){ %>
+                <%  categories.forEach(function(category, index) { %>
+                    <div class="mix cat-card projects">
+                        <div class="cat-image">
+                            <img src="../img/<%- category.image %>" alt="image">
+                            <div class="cat-overlay">
+                                <a href="#" class="cat-icon" style="--i:0.15s" target="_blank">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cat-desc">
+                            <h3><%- category.name %></h3>
+                            <a href="#" class="btn secondary-btn" target="_blank">Explore</a>
+                        </div>
                     </div>
-                </div>
-                <div class="cat-desc">
-                    <h3>Web Development</h3>
-                    <a href="#" class="btn secondary-btn" target="_blank">Explore</a>
-                </div>
-            </div>
+                <% }) %>
+            <% } %>
 
-
-            <div class="mix cat-card projects">
-                <div class="cat-image">
-                    <img src="../img/OpenSourceDevelopmentTeam.jpg" alt="image">
-                    <div class="cat-overlay">
-                        <a href="#" class="cat-icon" style="--i:0.15s" target="_blank">
-                            <i class="uil uil-link-h"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="cat-desc">
-                    <h3>Web Development</h3>
-                    <a href="#" class="btn secondary-btn" target="_blank">Explore</a>
-                </div>
-            </div>
+            
 
             
         </div>
