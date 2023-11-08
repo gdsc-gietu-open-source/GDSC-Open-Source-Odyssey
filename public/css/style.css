@@ -231,6 +231,17 @@ ul{
 
 
 /* --- CSS for details page --- */
+.web-development-section {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+  }
+  
+  .web-development-section h2 {
+    font-size: 24px; 
+    color: #333; 
+    margin-bottom: 20px; 
+  }
+  
 .project-details {
     padding: 20px;
 }
