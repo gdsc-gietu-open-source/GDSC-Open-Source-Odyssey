@@ -3,7 +3,8 @@
         <div class="category-header">
             <div class="category-title">
                 <h3 class="sub-heading">
-                    GDSC
+                    <img class="logo" src="../img/gdsc_gietu.png" style="width: 200px;
+                    height: 49px;">
                 </h3>
                 <h1 class="heading">Domains</h1>
             </div>
@@ -24,8 +25,8 @@
         </div>
 
         <div class="category-gallery">
-            <% if(categories != ""){ %>
-                <%  categories.forEach(function(category, index) { %>
+            <% if(categories !="" ){ %>
+                <% categories.forEach(function(category, index) { %>
                     <div class="mix cat-card <%= category.class %>">
                         <div class="cat-image">
                             <img src="../img/<%- category.image %>" alt="image">
@@ -40,12 +41,12 @@
                             <a href="/<%- category.route %>" class="btn secondary-btn" target="_blank">Explore</a>
                         </div>
                     </div>
-                <% }) %>
-            <% } %>
+                    <% }) %>
+                        <% } %>
 
-            
 
-            
+
+
         </div>
     </div>
 </section>
