@@ -55,7 +55,7 @@ exports.exploreIOT = async (req, res) => {
 };
 exports.exploreCyberSecurity = async (req, res) => {
   try {
-    res.render("cs", { title: "GDSC Cyber Security" });
+    res.render("CS", { title: "GDSC Cyber Security" });
   } catch (error) {
     res.status(500).send({ message: error.message || "Error Occured" });
   }
